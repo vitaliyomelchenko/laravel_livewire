@@ -35,7 +35,7 @@ Route::get('/admin/dashboard', AdminDashboardComponent::class)
 Route::get('/user/dashboard', UserDashboardComponent::class)
     ->middleware(['auth:sanctum', 'verified'])
     ->name('user.dashboard');
-
+// Route::get('//', []);
 
 
 
