@@ -9,6 +9,7 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\Test;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,8 @@ Route::get('/admin/dashboard', AdminDashboardComponent::class)
 Route::get('/user/dashboard', UserDashboardComponent::class)
     ->middleware(['auth:sanctum', 'verified'])
     ->name('user.dashboard');
-// Route::get('//', []);
+
+
 
 
 
