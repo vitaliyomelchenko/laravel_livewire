@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
@@ -69,7 +70,7 @@
                                     @auth
                                         @if (Auth::user()->utype === 'ADM')
                                             <li class="menu-item menu-item-has-children parent" >
-                                                <a title="My Account" href="{{ route('admin.dashboard') }}">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <a title="My Account" href="{{ route('admin.dashboard') }}">Hello {{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                                 <ul class="submenu curency" >
                                                     <li class="menu-item" >
                                                         <a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
@@ -84,7 +85,7 @@
                                             </li>
                                         @else
                                             <li class="menu-item menu-item-has-children parent" >
-                                                <a title="My Account" href="{{ route('user.dashboard') }}">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <a title="My Account" href="{{ route('user.dashboard') }}">Welcome {{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                                 <ul class="submenu curency" >
                                                     <li class="menu-item" >
                                                         <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
@@ -112,7 +113,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}" alt="mercado"></a>
+							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}" alt="mercado"></a>
 						</div>
 
 						<div class="wrap-search center-section">

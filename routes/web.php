@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Livewire\AboutUsComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\ContactUsComponent;
+use App\Http\Livewire\DetailComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
@@ -37,24 +39,4 @@ Route::get('/user/dashboard', UserDashboardComponent::class)
     ->middleware(['auth:sanctum', 'verified'])
     ->name('user.dashboard');
 
-
-
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
-
-
-// Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
-//     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
-// });
-
-// Route::middleware(['auth:sanctum', 'verified'])->group(function(){
-//     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
-// });
-
+Route::get('/products/{slug}', DetailComponent::class)->name('product.detail');
