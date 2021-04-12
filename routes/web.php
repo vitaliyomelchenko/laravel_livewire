@@ -26,7 +26,7 @@ use PHPUnit\Framework\Test;
 
 Route::get('/', HomeComponent::class);
 Route::get('/shop', ShopComponent::class);
-Route::get('/cart', CartComponent::class);
+Route::get('/cart', CartComponent::class)->name('product.cart');
 Route::get('/checkout', CheckoutComponent::class);
 Route::get('/about-us', AboutUsComponent::class);
 Route::get('/contact-us', ContactUsComponent::class);
@@ -40,4 +40,4 @@ Route::get('/user/dashboard', UserDashboardComponent::class)
     ->name('user.dashboard');
 
 Route::get('/products/{slug}', DetailComponent::class)->name('product.detail');
-Route::get();
+// Route::get();
