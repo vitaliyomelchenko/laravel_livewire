@@ -40,4 +40,3 @@ Route::get('/user/dashboard', UserDashboardComponent::class)
     ->name('user.dashboard');
 
 Route::get('/products/{slug}', DetailComponent::class)->name('product.detail');
-// Route::get();
